@@ -47,8 +47,8 @@ resource "aws_eks_node_group" "eks_cluster_node_group" {
   }
 
   depends_on = [
-    "aws_iam_role_policy_attachment.eks_node_worker_node_policy",
-    "aws_iam_role_policy_attachment.eks_node_cni_policy",
-    "aws_iam_role_policy_attachment.eks_node_ecr_read",
+    aws_iam_role_policy_attachment.eks_node_worker_node_policy,
+    aws_iam_role_policy_attachment.eks_node_cni_policy,
+    aws_iam_role_policy_attachment.eks_node_ecr_read,
   ]
 }
